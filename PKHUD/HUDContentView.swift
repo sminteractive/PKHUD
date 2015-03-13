@@ -36,7 +36,7 @@ public struct HUDContentView {
     /// Provides a wide, three line text view, which you can use to display information.
     public class TextView: WideBaseView {
         public init(text: String?) {
-            super.init()
+            super.init(frame: CGRect(origin: CGPointZero, size: CGSize(width: 265.0, height: 90.0)))
             commonInit(text)
         }
 
@@ -71,7 +71,7 @@ public struct HUDContentView {
     /// Provides a square view, which you can use to display a single image.
     public class ImageView: SquareBaseView {
         public init(image: UIImage?) {
-            super.init()
+            super.init(frame: CGRect(origin: CGPointZero, size: CGSize(width: 156.0, height: 156.0)))
             commonInit(image)
         }
         
@@ -133,7 +133,7 @@ public struct HUDContentView {
     //// Provides the system UIActivityIndicatorView as an alternative.
     public final class SystemActivityIndicatorView: UIView {
         
-        required public override init() {
+        required public init() {
             super.init(frame: CGRectMake(0.0, 0.0, 120.0, 120.0))
             self.commonInit()
         }
